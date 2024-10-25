@@ -1,10 +1,10 @@
 package com.hib;
 
-import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import jakarta.persistence.Transient;
+
 
 @Entity
 @Table
@@ -36,12 +36,21 @@ public int getId() {
 		this.id = id;
 	}
 	
+
 @Override
 	public String toString() {
-		return "Employee [id=" + id + ", name=" + name + ", age=" + age + ", domain=" + domain + "]";
+		return "Employee [id=" + id + ", name=" + name + ", age=" + age + ", address=" + address + ", domain=" + domain
+				+ "]";
 	}
 private String name;
 
    private int age;
-   private String domain ;
+   private 	Address address;
+   public Address getAddress() {
+	return address;
+}
+public void setAddress(Address address) {
+	this.address = address;
+}
+private String domain ;
 }
