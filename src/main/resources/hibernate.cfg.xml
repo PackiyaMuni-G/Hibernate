@@ -21,5 +21,8 @@
         
         <!-- Update the database schema -->
         <property name="hibernate.hbm2ddl.auto">update</property>
+           <!-- Add annotated classes here -->
+        <mapping class="com.hib.Student"/>
+        <mapping class="com.hib.Laptop"/>
     </session-factory>
 </hibernate-configuration>

@@ -7,22 +7,23 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Laptop {
 	@Id
 private int lid;
-//	@ManyToOne
-//	private Student student;
-	@ManyToMany
-	private List<Student> student=new ArrayList<>();
+	@ManyToOne
+	private Student student;
+//	@OneToMany
+//	private List<Student> student=new ArrayList<>();
 public int getLid() {
 	return lid;
 }
-public List<Student> getStudent() {
+public Student getStudent() {
 	return student;
 }
-public void setStudent(List<Student> student) {
+public void setStudent(Student student) {
 	this.student = student;
 }
 public void setLid(int lid) {

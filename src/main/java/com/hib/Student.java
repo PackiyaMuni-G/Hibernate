@@ -39,7 +39,7 @@ public void setMarks(int marks) {
 }
 //@OneToMany(mappedBy = "student")
 //private List<Laptop> laptop=new ArrayList<>();
-@ManyToMany(mappedBy = "student")
+@OneToMany(mappedBy = "student")
 private List<Laptop> laptop=new ArrayList<>();
 public List<Laptop> getLaptop() {
 	return laptop;
